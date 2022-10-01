@@ -3,7 +3,7 @@ const inputEmail = document.querySelector('.email')
 const inputMessage = document.querySelector('.message')
 const send = document.querySelector('.send')
 const reset = document.querySelector('.reset')
-const listItems = document.querySelector('.output')
+const divItems = document.querySelector('.output')
 
 send.addEventListener('click', (e) => {
     e.preventDefault()
@@ -14,6 +14,7 @@ send.addEventListener('click', (e) => {
     }))
 
     let details = JSON.parse(localStorage.getItem('details'));
+    const listItems = document.createElement('ul')
     const list1 = document.createElement('li')
     const node1 = document.createTextNode(details.name)
     list1.appendChild(node1)
@@ -28,6 +29,9 @@ send.addEventListener('click', (e) => {
     listItems.appendChild(list2)
     listItems.appendChild(list3)
 
+    listItems.classList.add('listItems')
+
+    divItems.appendChild(listItems)
 
 })
 
@@ -38,6 +42,8 @@ reset.addEventListener('click', (e) => {
     inputMessage.value = ""
 
     localStorage.clear()
+    const listItems = document.querySelector('.listItems')
+    listItems.remove();
 
 })
 
