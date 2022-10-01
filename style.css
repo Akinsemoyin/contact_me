@@ -92,11 +92,11 @@ button {
     }
 
     button {
-
-        padding: 2px 1.5rem;
-        font-size: 1.5rem;
+        padding: 2px 1rem;
+        font-size: 1rem;
     }
 
     .button {
-        /* justify-content: space-between;
+        margin: 1rem 0.2rem;
+    }
 }
