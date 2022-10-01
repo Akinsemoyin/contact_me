@@ -79,6 +79,16 @@ button {
     background-color: yellow;
 }
 
+li {
+    color: white;
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+
 
 @media only screen and (max-width: 550px) {
 
